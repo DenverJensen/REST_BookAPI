@@ -6,10 +6,10 @@ from django.db import models
 class BookData(models.Model):
 
     def __str__(self):
-        return self.name
+        return self.name 
 
     name = models.CharField(max_length=200)
-    duration = models.FloatField()
+    category = models.CharField(max_length=200, default='favorites')
+    description = models.CharField(max_length=5000)
     rating = models.FloatField()
-    genre = models.CharField(max_length=200, default='favorites')
     image = models.ImageField(upload_to='images', default='images/none/noimg.jpg')
