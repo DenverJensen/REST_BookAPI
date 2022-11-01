@@ -13,10 +13,39 @@ class BookViewSet(viewsets.ModelViewSet):
 
 
 class FavoriteViewSet(viewsets.ModelViewSet):
-    queryset = BookData.objects.filter(genre='favorites')
+    queryset = BookData.objects.filter(category='favorites')
     serializer_class = BookSerializer
 
 
 class ComedyViewSet(viewsets.ModelViewSet):
-    queryset = BookData.objects.filter(genre='comedy')
+    queryset = BookData.objects.filter(category='comedy')
     serializer_class = BookSerializer
+
+class HorrorViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(category='horror')
+    serializer_class = BookSerializer
+
+class FantasyViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(category='fantasy')
+    serializer_class = BookSerializer
+
+class ChildrenViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(category='children')
+    serializer_class = BookSerializer
+
+class LiteratureViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(category='american literature')
+    serializer_class = BookSerializer
+
+class TopRatedViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(rating = 10)
+    serializer_class = BookSerializer
+
+class TragedyViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(category='tragedy')
+    serializer_class = BookSerializer
+
+class BiographyViewSet(viewsets.ModelViewSet):
+    queryset = BookData.objects.filter(category='biography')
+    serializer_class = BookSerializer
+
