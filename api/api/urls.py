@@ -16,29 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-<<<<<<< HEAD
 from books.views import BookViewSet, FavoriteViewSet, ComedyViewSet
-=======
-from movies.views import MovieViewSet, FavoriteViewSet, ComedyViewSet
->>>>>>> main
+
 from django.conf.urls.static import static
 from django.conf import settings
 
 router = routers.SimpleRouter()
-<<<<<<< HEAD
+
 router.register('books', BookViewSet)
-=======
-router.register('movies', MovieViewSet)
->>>>>>> main
+
 router.register('favorites', FavoriteViewSet)
 router.register('comedy', ComedyViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
->>>>>>> main
